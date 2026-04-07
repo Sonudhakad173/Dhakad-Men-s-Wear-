@@ -1,18 +1,7 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "routes": [
-    {
-      "src": "/api/.*",
-      "dest": "/(.*)"
-    },
-    {
-      "src": "/static/.*",
-      "dest": "/static/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
+    { "handle": "filesystem" },
+    { "src": "/.*", "dest": "/index.html" }
   ]
 }
